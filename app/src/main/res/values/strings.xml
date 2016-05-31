@@ -2,4 +2,7 @@
     <string name="app_name">Firebase</string>
     <string name="text_btnFoggy">Foggy</string>
     <string name="text_btnSunny">Sunny</string>
+
+    <!-- Url firebase -->
+    <string name="baseUrl">https://samplefirebase-fb78d.firebaseio.com/</string>
 </resources>

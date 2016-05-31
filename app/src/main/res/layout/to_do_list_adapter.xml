@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="3dp">
+
+    <TextView
+        android:id="@+id/txtPhoneAdapter"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="555-5555-5555"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/txtNameAdapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="555-5555-5555"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="normal"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_not_important"
+        android:layout_gravity="right"/>
+
+</LinearLayout>

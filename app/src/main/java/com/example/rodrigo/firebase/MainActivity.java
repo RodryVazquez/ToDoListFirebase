@@ -1,5 +1,6 @@
 package com.example.rodrigo.firebase;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +14,10 @@ import com.firebase.client.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnSunny, btnFuggy;
+    Button btnSunny, btnFuggy,btnShowToDoList;
     TextView txtInfo;
     Firebase mRef;
+    private static final String urlPartial = "condition";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         txtInfo = (TextView)findViewById(R.id.txtInfo);
         btnSunny = (Button)findViewById(R.id.btnSunny);
         btnFuggy = (Button)findViewById(R.id.btnFoggy);
-        mRef = new Firebase("https://samplefirebase-fb78d.firebaseio.com/condition");
+        btnShowToDoList = (Button)findViewById(R.id.btnShowToDoList);
+
+        mRef = new Firebase(getResources().getString(R.string.baseUrl) + urlPartial);
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -44,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //
         btnSunny.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,11 +55,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //
         btnFuggy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mRef.setValue("Foggy");
+            }
+        });
+
+        btnShowToDoList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ToDoListActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -36,4 +36,16 @@
         android:textColor="#fafafa"
         android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-condensed"/>
+
+
+    <Button
+        android:id="@+id/btnShowToDoList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show ToDoList"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"
+        android:textColor="#fafafa"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-condensed"/>
 </LinearLayout>
